@@ -4,16 +4,13 @@ import { useGlobalContext } from "../context/GlobalContext";
 import { FaSearch  } from "react-icons/fa";
 
 const WishList = () => {
-  const { wishList, deleteFromWishList } = useGlobalContext();
+  const { wishList, deleteFromWishList, removeAll } = useGlobalContext();
   const [searchInput, setSearchInput] = useState("");
 
   const filteredWishList = wishList.filter((movie) => {
     return movie.Title.toLowerCase().includes(searchInput.toLowerCase());
   });
 
-  const resetSearch = () => {
-    window.location.reload(true);
-  };
 
   return (
     <Layout>
@@ -35,11 +32,11 @@ const WishList = () => {
                 </span>
               </button>
               <button
-             className="group-hover:bg-red-200  dark:group-hover:bg-blue-100 transition duration-500 text-lg ml-2 rounded
-             px-3  text-gega-red dark:text-sky-500  text-semibold"
-                onClick={resetSearch}
+             className="group-hover:bg-red-200  dark:group-hover:bg-blue-100 transition duration-500 text-lg ml-3 rounded
+              px-3 text-gega-red dark:text-sky-500  text-semibold"
+                onClick={removeAll}
               >
-                Reset
+                Remove All Movies
               </button>
             </div>
           </form>
@@ -69,7 +66,7 @@ const WishList = () => {
                           className="px-3 py-2 bg-indigo-500 rounded-md hover:bg-gega-red duration-500 "
                           onClick={() => deleteFromWishList(movie.imdbID)}
                         >
-                          Remove From WishList
+                          Dlete From WishList
                         </button>
                       </p>
                       <div className="absolute flex space-x-8 text-gega-grey opacity-0 -bottom-3 group-hover:bottom-2 group-hover:opacity-100 duration-500"></div>
@@ -80,7 +77,7 @@ const WishList = () => {
             })
           ) : (
             <div className="h-[450px] w-full">
-              <h1 className="text-gega-red text-4xl capitalize">
+              <h1 className="text-gega-red text-3xl capitalize">
                 your wishList is empty
               </h1>
             </div>
