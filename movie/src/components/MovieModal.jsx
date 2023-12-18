@@ -51,7 +51,7 @@ const MovieModal = () => {
                           {movieDetail ? (
                             <div>
                               <img src={movieDetail.Poster} className="w-full rounded-md h-96 object-cover" />
-                              <div className="mt-4 text-primary">
+                              <div className="my-2 text-primary font-poppins">
                                 <h4 className="text-gega-red">
                                   {movieDetail.Title}
                                 </h4>
@@ -71,7 +71,7 @@ const MovieModal = () => {
                           )}
                           <button
                             type="button"
-                            className="focus:outline-none w-full text-white bg-sky-600 hover:opacity-90 transition-all duration-500 mt-5  outline-0 font-medium rounded-md  px-4 py-1 text-md"
+                            className="focus:outline-none w-full text-white bg-sky-600 hover:opacity-80 transition-all duration-500  outline-0 font-medium rounded-md  px-4 py-1  text-md"
                             onClick={closeModal}
                           >
                             Close

@@ -56,6 +56,8 @@ const GlobalContextProvider = ({ children }) => {
     });
   };
 
+
+
   const contextValue = {
     movies,
     setMovies,
@@ -69,7 +71,8 @@ const GlobalContextProvider = ({ children }) => {
     selectedMovie,
     openModal,
     closeModal,
-    show
+    show,
+
   };
   const Component = GlobalContext.Provider;
   return <Component value={contextValue}>{children}</Component>;

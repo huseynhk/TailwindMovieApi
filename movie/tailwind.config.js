@@ -26,10 +26,9 @@ export default {
       },
 
       spacing:{
-       myHeight:'30rem',
+       myHeight:'34rem',
       },
     },
   },
   plugins: [],
 }
-
