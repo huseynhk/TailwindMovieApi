@@ -56,10 +56,7 @@ const GlobalContextProvider = ({ children }) => {
     });
   };
 
-  const removeAll = () => {
-    setWishList([]);
-    localStorage.removeItem("wishList");
-  };
+
 
   const contextValue = {
     movies,
@@ -75,7 +72,6 @@ const GlobalContextProvider = ({ children }) => {
     openModal,
     closeModal,
     show,
-    removeAll,
   };
   const Component = GlobalContext.Provider;
   return <Component value={contextValue}>{children}</Component>;

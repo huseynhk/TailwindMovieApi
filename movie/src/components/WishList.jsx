@@ -4,7 +4,7 @@ import { useGlobalContext } from "../context/GlobalContext";
 import { FaSearch  } from "react-icons/fa";
 
 const WishList = () => {
-  const { wishList, deleteFromWishList, removeAll } = useGlobalContext();
+  const { wishList, deleteFromWishList } = useGlobalContext();
   const [searchInput, setSearchInput] = useState("");
 
   const filteredWishList = wishList.filter((movie) => {
@@ -31,13 +31,7 @@ const WishList = () => {
                   <FaSearch />
                 </span>
               </button>
-              <button
-             className="group-hover:bg-red-200  dark:group-hover:bg-blue-100 transition duration-500 text-lg ml-3 rounded
-              px-3 text-gega-red dark:text-sky-500  text-semibold"
-                onClick={removeAll}
-              >
-                Remove All Movies
-              </button>
+            
             </div>
           </form>
         </div>
