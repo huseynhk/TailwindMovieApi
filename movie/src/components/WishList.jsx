@@ -61,12 +61,12 @@ const WishList = () => {
                         </span>
                       </h2>
 
-                      <p className="text-md opacity-0 group-hover:opacity-100 group-hover:mb-2 duration-500 text-gega-grey">
+                      <p className="text-md opacity-0 group-hover:opacity-100 group-hover:mb-1 duration-500 text-gega-grey">
                         <button
                           className="px-3 py-2 bg-indigo-500 rounded-md hover:bg-gega-red duration-500 "
                           onClick={() => deleteFromWishList(movie.imdbID)}
                         >
-                          Dlete From WishList
+                          Delete From WishList
                         </button>
                       </p>
                       <div className="absolute flex space-x-8 text-gega-grey opacity-0 -bottom-3 group-hover:bottom-2 group-hover:opacity-100 duration-500"></div>
