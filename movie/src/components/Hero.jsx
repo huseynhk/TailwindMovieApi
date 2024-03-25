@@ -19,7 +19,10 @@ const Hero = () => {
               cumque maiores non consequatur veniam nesciunt mollitia! Sapiente
               culpa deleniti quis quam nam voluptas id, accusamus iure quisquam,
               officiis debitis iusto earum laudantium alias harum ad neque dolor
-              ipsa non?
+              ipsa non? Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Sed hic culpa incidunt eveniet, reiciendis aperiam nihil
+              nulla veniam maxime mollitia expedita natus cupiditate accusamus
+              voluptas quasi dolore soluta consequuntur quaerat!
             </p>
             <div className="flex space-x-8 opacity-0 group-hover:opacity-100 group-hover:mb-10 lg:group-hover:mb-14 duration-1000"></div>
           </div>

@@ -39,18 +39,18 @@ const Home = () => {
     if (search.trim() !== "") {
       const response = await GetSearchMovies(search);
       setMovies(response ? response.Search : []);
-    }
-    else{
+    } else {
       fetchMovies();
     }
   };
-  useEffect(() => {
-    fetchMovie();
-  }, [search]);
 
   const resetSearch = () => {
     fetchMovies();
   };
+
+  useEffect(() => {
+    fetchMovie();
+  }, [search]);
 
   return (
     <Layout>

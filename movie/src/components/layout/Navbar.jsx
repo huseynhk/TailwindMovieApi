@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes, FaCloud } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { ROUTER } from "../../constant/Router";
 import { activeLink } from "../../utils/ActiveLink";
 import { useThemeContext } from "../../context/ThemeContext";
-import { BsFillCloudSunFill } from "react-icons/bs";
+import { GoMoon } from "react-icons/go";
 import { FiSun } from "react-icons/fi";
 
 const Navbar = () => {
@@ -113,7 +113,7 @@ const Navbar = () => {
               {theme === "light" ? (
                 <FiSun size={45} className="text-gega-red  dark:text-sky-200 cc" />
               ) : "dark" ? (
-                <BsFillCloudSunFill size={45} className="text-sky-800  dark:text-sky-200 " />
+                <GoMoon size={45} className="text-sky-800  dark:text-sky-200 " />
               ) : (
                 ""
               )}
