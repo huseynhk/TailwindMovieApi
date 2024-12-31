@@ -23,13 +23,17 @@ const Home = () => {
     search,
     setSearch,
     openModal,
+    loading,
+    setLoading,
   } = useGlobalContext();
 
   const navigate = useNavigate();
 
   const fetchMovies = async () => {
+    setLoading(true);
     const response = await GetMovies();
     setMovies(response ? response.Search : []);
+    setLoading(false);
   };
   useEffect(() => {
     fetchMovies();
@@ -37,8 +41,10 @@ const Home = () => {
 
   const fetchMovie = async () => {
     if (search.trim() !== "") {
+      setLoading(true);
       const response = await GetSearchMovies(search);
       setMovies(response ? response.Search : []);
+      setLoading(false);
     } else {
       fetchMovies();
     }
@@ -65,7 +71,7 @@ const Home = () => {
                 placeholder="Search Movies"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-400  focus:outline-none w-24 lg:w-48 transition duration-500 "
+                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-300  focus:outline-none  lg:w-[18rem] transition duration-500 "
               />
               <button className="group-hover:ml-0 transition duration-500 ">
                 <span className=" text-white dark:text-black group-hover:text-gega-red dark:group-hover:text-sky-400 transition duration-400 text-xl">
@@ -82,26 +88,30 @@ const Home = () => {
             </div>
           </form>
         </div>
-        <div className=" bg-white dark:bg-black container grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
-          {movies && movies.length > 0 ? (
-            movies.map((movie) => {
+
+        {loading ? (
+          <div className="flex justify-center items-center col-span-4 mt-[5vh]">
+            <div className="w-16 h-16 border-4 border-t-4 border-gega-red dark:border-sky-500 border-solid rounded-full animate-spin"></div>
+          </div>
+        ) : movies && movies.length > 0 ? (
+          <div className="bg-white dark:bg-black container grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {movies.map((movie) => {
               const inWishlist = isMovieInWishlist(movie.imdbID);
               return (
-                <div className="mx-auto">
+                <div className="mx-auto" key={movie.imdbID}>
                   <div className="group relative overflow-hidden cursor-pointer">
                     <img
                       src={movie.Poster}
-                      className="group-hover:scale-110 group-hover:opacity-80 dark:group-hover:opacity-50 duration-500 rounded-sm "
+                      className="group-hover:scale-110 group-hover:opacity-80 dark:group-hover:opacity-50 duration-500 rounded-md h-96 w-72 object-fill"
                       alt={movie.Title}
                     />
                     <div className="absolute px-8 bottom-8">
-                      <h2 className="text-gega-grey group-hover:text-gega-melon group-hover:mb-5 font-poppins font-bold duration-500 text-xl">
-                        {movie.Title.slice(0, 13)}
+                      <h2 className="text-gega-grey truncate group-hover:text-gega-melon group-hover:mb-5 font-poppins font-bold duration-500 text-xl">
+                        {movie.Title}
                         <span className="group-hover:text-green-500 ml-3">
                           {movie.Year}
                         </span>
                       </h2>
-
                       <p className="text-md opacity-0 group-hover:opacity-100 group-hover:mb-14 duration-500 text-gega-grey"></p>
                       <div className="absolute flex space-x-8 text-gega-grey opacity-0 -bottom-3 group-hover:bottom-2 group-hover:opacity-100 duration-500">
                         <button
@@ -133,11 +143,15 @@ const Home = () => {
                   </div>
                 </div>
               );
-            })
-          ) : (
-            <p className="text-gega-red text-4xl font-bold">Not Found...</p>
-          )}
-        </div>
+            })}
+          </div>
+        ) : (
+          <div className="bg-white dark:bg-black w-full flex justify-center">
+            <h1 className="text-gega-red dark:text-cyan-300 text-4xl capitalize mt-[15vh]">
+              not found
+            </h1>
+          </div>
+        )}
       </section>
       <MovieModal />
     </Layout>

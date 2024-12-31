@@ -26,7 +26,7 @@ export default {
       },
 
       spacing:{
-       myHeight:'34rem',
+       myHeight:'35rem',
       },
     },
   },

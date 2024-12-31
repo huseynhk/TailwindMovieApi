@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Home from "./components/Home";
 import Detail from "./components/Detail";
 import WishList from "./components/WishList";
+import SignIn from "./components/SignIn";
 import NotFound from "./components/NotFound";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path={ROUTER.Home} element={<Home />} />
         <Route path={ROUTER.Detail + "/:movieId"} element={<Detail />} />
         <Route path={ROUTER.WishList} element={<WishList />} />
+        <Route path={ROUTER.SignIn} element={<SignIn />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />

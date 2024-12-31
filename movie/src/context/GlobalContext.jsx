@@ -10,9 +10,17 @@ const GlobalContextProvider = ({ children }) => {
       ? JSON.parse(localStorage.getItem("wishList"))
       : []
   );
+  const [user, setUser] = useState(
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user"))
+      : null
+  );
   const [search, setSearch] = useState("");
   const [show, setShow] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
+  const [showRmv, setShowRmv] = useState(false);
+  const [deletedMovie, setDeletedMovie] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const openModal = (movie) => {
     setShow(true);
@@ -22,6 +30,16 @@ const GlobalContextProvider = ({ children }) => {
   const closeModal = () => {
     setShow(false);
     setSelectedMovie(null);
+  };
+
+  const openRmvModal = (movie) => {
+    setShowRmv(true);
+    setDeletedMovie(movie);
+  };
+
+  const closeRmvModal = () => {
+    setShowRmv(false);
+    setDeletedMovie(null);
   };
 
   const addToWishList = (imdbID) => {
@@ -56,7 +74,15 @@ const GlobalContextProvider = ({ children }) => {
     });
   };
 
+  const signIn = (userData) => {
+    setUser(userData);
+    localStorage.setItem("user", JSON.stringify(userData));
+  };
 
+  const signOut = () => {
+    setUser(null);
+    localStorage.removeItem("user");
+  };
 
   const contextValue = {
     movies,
@@ -72,6 +98,15 @@ const GlobalContextProvider = ({ children }) => {
     openModal,
     closeModal,
     show,
+    showRmv,
+    deletedMovie,
+    openRmvModal,
+    closeRmvModal,
+    user,
+    signIn,
+    signOut,
+    loading,
+    setLoading,
   };
   const Component = GlobalContext.Provider;
   return <Component value={contextValue}>{children}</Component>;
