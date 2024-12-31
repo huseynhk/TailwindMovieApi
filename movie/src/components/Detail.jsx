@@ -33,7 +33,7 @@ const Detail = () => {
             <div className="w-16 h-16 border-4 border-t-4 border-gega-red dark:border-sky-500 border-solid rounded-full animate-spin"></div>
           </div>
         ) : movieDetail ? (
-          <div className="max-w-md  lg:max-w-3xl lg:flex h-[75vh] font-poppins dark:bg-sky-100 border dark:border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 mx-auto">
+          <div className="max-w-xs md:max-w-md  lg:max-w-3xl lg:flex lg:h-[75vh] font-poppins dark:bg-sky-100 border dark:border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 mx-auto">
             <img
               className="w-full lg:w-1/2  object-cover"
               src={movieDetail.Poster}
@@ -64,7 +64,6 @@ const Detail = () => {
                   className=" hover:text-sky-500 transition-all duration-500"
                 />
                 <span className="ml-2 text-lg text-sky-200 dark:text-sky-500 hover:opacity-80 transition-all duration-500">
-                  {" "}
                   Go Back
                 </span>
               </button>
