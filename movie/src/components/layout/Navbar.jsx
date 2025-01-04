@@ -35,9 +35,9 @@ const Navbar = () => {
           {/* Hamburger Menu */}
           <div className="lg:hidden">
             <FaBars
-              size={40}
+              size={35}
               onClick={toggleMenu}
-              className="text-blue-600 dark:text-sky-400 hover:opacity-80 transition-all duration-500 text-3xl cursor-pointer"
+              className="text-gega-red dark:text-sky-400 hover:opacity-80 transition-all duration-500  cursor-pointer"
             />
           </div>
 

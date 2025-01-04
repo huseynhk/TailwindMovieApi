@@ -70,7 +70,7 @@ const SignIn = () => {
               required
               value={formData.username}
               onChange={handleInputChange}
-              className="mt-1 px-4 py-2 block w-full border text-slate-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 dark:focus:border-sky-400"
+              className="mt-1 px-4 py-2 block w-full border-cyan-300 border rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 dark:focus:border-sky-400"
             />
           </div>
           <div>
@@ -87,7 +87,7 @@ const SignIn = () => {
               required
               value={formData.email}
               onChange={handleInputChange}
-              className="mt-1 px-4 py-2 block w-full border border-slate-300  rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 dark:focus:border-sky-400"
+              className="mt-1 px-4 py-2 block w-full border border-cyan-300  rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 dark:focus:border-sky-400"
             />
           </div>
           <div>
@@ -104,7 +104,7 @@ const SignIn = () => {
               required
               value={formData.image}
               onChange={handleInputChange}
-              className="mt-1 px-4 py-2 block w-full border border-slate-300  rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 dark:focus:border-sky-400"
+              className="mt-1 px-4 py-2 block w-full border border-cyan-300  rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 dark:focus:ring-sky-400 dark:focus:border-sky-400"
             />
           </div>
           <button

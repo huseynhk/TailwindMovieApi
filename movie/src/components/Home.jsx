@@ -35,9 +35,7 @@ const Home = () => {
     setMovies(response ? response.Search : []);
     setLoading(false);
   };
-  useEffect(() => {
-    fetchMovies();
-  }, []);
+
 
   const fetchMovie = async () => {
     if (search.trim() !== "") {
@@ -48,10 +46,6 @@ const Home = () => {
     } else {
       fetchMovies();
     }
-  };
-
-  const resetSearch = () => {
-    fetchMovies();
   };
 
   useEffect(() => {
@@ -71,20 +65,14 @@ const Home = () => {
                 placeholder="Search Movies"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-300  focus:outline-none  lg:w-[18rem] transition duration-500 "
+                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-300  focus:outline-none w-[14rem]  lg:w-[18rem] transition duration-500 "
               />
               <button className="group-hover:ml-0 transition duration-500 ">
                 <span className=" text-white dark:text-black group-hover:text-gega-red dark:group-hover:text-sky-400 transition duration-400 text-xl">
                   <FaSearchengin />
                 </span>
               </button>
-              <button
-                className="group-hover:bg-red-200  dark:group-hover:bg-blue-100 transition duration-500 text-lg ml-2 rounded
-                    px-3  text-gega-red dark:text-sky-500  text-semibold"
-                onClick={resetSearch}
-              >
-                Reset
-              </button>
+              
             </div>
           </form>
         </div>

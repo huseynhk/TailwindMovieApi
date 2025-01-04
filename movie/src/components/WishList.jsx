@@ -22,7 +22,7 @@ const WishList = () => {
 
   return (
     <Layout>
-      <section className="py-20 bg-white  dark:bg-black flex flex-col justify-center items-center">
+      <section className="py-20 bg-white  dark:bg-black flex flex-col justify-center items-center min-h-screen">
         <div className="mb-12 -mt-14">
           <form>
             <div className="group px-6 mx-4 py-2 text-sky-700 dark:text-sky-400 ">
@@ -31,7 +31,7 @@ const WishList = () => {
                 placeholder="Search Movies"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
-                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-400  focus:outline-none w-24 lg:w-48 transition duration-500 "
+                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-400  focus:outline-none w-[14rem] lg:w-[18rem] transition duration-500 "
               />
               <button className="group-hover:ml-0 transition duration-500 ">
                 <span className=" text-white dark:text-black group-hover:text-gega-red dark:group-hover:text-sky-400 transition duration-400 text-xl">
