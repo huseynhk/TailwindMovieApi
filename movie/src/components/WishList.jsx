@@ -31,7 +31,7 @@ const WishList = () => {
                 placeholder="Search Movies"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
-                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-400  focus:outline-none w-[14rem] lg:w-[18rem] transition duration-500 "
+                className="text-black  dark:text-sky-50 bg-transparent border-b border-gega-red dark:border-sky-400  focus:outline-none w-[16rem]  lg:w-[24rem] transition duration-500 "
               />
               <button className="group-hover:ml-0 transition duration-500 ">
                 <span className=" text-white dark:text-black group-hover:text-gega-red dark:group-hover:text-sky-400 transition duration-400 text-xl">
