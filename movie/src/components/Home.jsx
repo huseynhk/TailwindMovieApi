@@ -94,8 +94,8 @@ const Home = () => {
                       alt={movie.Title}
                     />
                     <div className="absolute px-8 bottom-8">
-                      <h2 className="text-gega-grey truncate group-hover:text-gega-melon group-hover:mb-5 font-poppins font-bold duration-500 text-xl">
-                        {movie.Title}
+                      <h2 className="text-gega-grey  group-hover:text-gega-melon group-hover:mb-5 font-poppins font-bold duration-500 text-xl">
+                        {movie.Title.slice(0,20)}
                         <span className="group-hover:text-green-500 ml-3">
                           {movie.Year}
                         </span>

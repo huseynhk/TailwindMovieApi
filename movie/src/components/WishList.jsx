@@ -55,7 +55,7 @@ const WishList = () => {
                     />
                     <div className="absolute px-6 bottom-8">
                       <h2 className="text-gega-grey truncate group-hover:text-gega-melon group-hover:mb-6 font-poppins font-bold duration-500 text-xl">
-                        {movie.Title}
+                        {movie.Title.slice(0,20)}
                         <span className="group-hover:text-green-500 ml-2">
                           {movie.Year}
                         </span>
