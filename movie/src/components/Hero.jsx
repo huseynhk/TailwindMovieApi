@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="absolute bottom-0 w-full bg-gradient-to-b from-transparent to-gega-red  dark:to-blue-900">
           <div className="container pl-10 lg:pl-0">
             <h3 className="text-red-200 dark:text-green-300 md:dark:text-green-200 tracking-wider group-hover:mb-1 duration-500 text-bold capitalize ">
-              action , drama , romantic, thriller , horror
+              romantic , drama , action , thriller , horror
             </h3>
             <h1 className="text-4xl lg:text-6xl dark:text-blue-300 md:dark:text-blue-200 group-hover:mb-1 duration-500">
               Join Us
