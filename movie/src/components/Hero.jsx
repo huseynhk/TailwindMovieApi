@@ -11,10 +11,10 @@ const Hero = () => {
             <h3 className="text-red-200 dark:text-green-200 tracking-wider group-hover:mb-1 duration-500 text-bold capitalize ">
               romantic , drama , action , thriller , horror
             </h3>
-            <h1 className="text-3xl lg:text-5xl dark:text-blue-200 group-hover:mb-1 duration-500">
+            <h1 className="text-3xl lg:text-5xl text-rose-200 dark:text-blue-200 group-hover:mb-1 duration-500">
               Join Us
             </h1>
-            <p className="hidden md:flex mt-3 mb-8 text-sky-200  group-hover:mb-4 duration-500 w-3/4 text-base">
+            <p className="hidden md:flex mt-3 mb-8 text-pink-100 dark:text-sky-200  group-hover:mb-4 duration-500 w-3/4 text-base">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at
               cumque maiores non consequatur veniam nesciunt mollitia! Sapiente
               culpa deleniti quis quam nam voluptas id, accusamus iure quisquam,
@@ -25,7 +25,7 @@ const Hero = () => {
               voluptas quasi dolore soluta consequuntur quaerat!
             </p>
 
-            <p className="flex md:hidden mt-3 mb-5  pr-[6px]  text-sky-200  group-hover:mb-3 duration-500 w-full text-sm">
+            <p className="flex md:hidden mt-3 mb-5  pr-[6px]  text-red-200 dark:text-sky-200  group-hover:mb-3 duration-500 w-full text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat at
               cumque maiores non consequatur veniam nesciunt mollitia! Sapiente
               culpa deleniti quis quam nam voluptas id, accusamus iure quisquam,
